@@ -1,0 +1,406 @@
+
+/***********************************Home page section********************************/
+/* FOR NAV BAR*/
+
+.nav_bg {
+    background-color: #31326f;
+}
+
+.nav_brand_font_size {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+}
+
+
+
+.navbar-nav .nav-pad {
+    padding: 5px 20px !important;
+    margin : 0 0 5px;
+}
+
+ .nav-item a:hover {
+    color : #f6f5f5 !important;
+}
+
+ /* used for nav bar "Register"*/
+.BUTTON_TBH {
+    background: #031324;
+    background-image: -webkit-linear-gradient(top, #031324, #1E62D0);
+    background-image: -moz-linear-gradient(top, #031324, #1E62D0);
+    background-image: -ms-linear-gradient(top, #031324, #1E62D0);
+    background-image: -o-linear-gradient(top, #031324, #1E62D0);
+    background-image: -webkit-gradient(to bottom, #031324, #1E62D0);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 100;
+    margin-top: 8px;
+    padding: 0 20px;
+    -webkit-box-shadow: 1px 1px 20px 0 #000000;
+    -moz-box-shadow: 1px 1px 20px 0 #000000;
+    box-shadow: 1px 1px 20px 0 #000000;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #337FED 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.BUTTON_TBH:hover {
+    border: solid #337FED 1px;
+    background: #1E62D0;
+    background-image: -webkit-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -moz-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -ms-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -o-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -webkit-gradient(to bottom, #1E62D0, #3D94F6);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/* for image List title */
+#HousesList h1 {
+    font-family: 'Dancing Script', cursive;
+}
+
+#HousesList .title {
+    margin: 0 0 50px 20% ;
+    padding-bottom: 20px;
+}
+/*Design for profile information*/
+.Profile {
+    text-align: center;
+    padding-bottom: 88px !important;
+}
+
+.Profile .img-container {
+    border: 4px solid black;
+    border-width: medium;
+}
+
+.Profile .company_infor {
+    margin: 0 auto;
+    align-items: center;
+}
+
+ .Profile .company_img {
+     width: 120px;
+     height: 80px;
+     margin-right: 20px;
+ }
+
+
+ .Profile a {
+     font-size: 1.5rem;
+     text-decoration: none;
+     color: #1a1c20;
+ }
+
+ .Profile a:hover {
+     color: #007aff;
+ }
+
+.Profile {
+    text-align: center;
+    padding: 5% 10% 10%;
+
+}
+/*  Design for Rachael Image*/
+#Rachael-Image {
+    text-align: center;
+}
+
+#Rachael-Image .img-container {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+
+#Rachael-Image img {
+    width: 100%  ;
+    height: auto;
+}
+
+/*************************** design for house-img card*********************/
+.card-body {
+    height: 135.6px;
+}
+
+#houseImgs img {
+    height: 232px;
+    width: 384px;
+}
+
+@media only screen and (max-width: 510px) {
+    #houseImgs img {
+        height: 301px;
+    }
+}
+
+@media only screen and (min-width: 511px) and (max-width: 970px) {
+    .row .loc {
+        padding:5px;
+    }
+}
+
+.row .loc {
+    margin-bottom: 88px;
+}
+
+/* Add tooltip for card title */
+
+.card-title > h5 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    opacity: 1;
+    /*border-bottom: 1px dotted black; !* If you want dots under the hoverable text *!*/
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: rgba(0,43,73,.9);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;   /*THis makes your content in one line*/
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0,43,73,.9) transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+.card-body .address {
+    font-size: 12px;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+.card-body p.price {
+    color: #002b49;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.card-footer .text-muted {
+    color: #002b49 !important;
+    font-weight: 700;
+}
+
+
+.card-footer div {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/*****************************Made a Lightbox*********************/
+section .modal {
+    z-index: 2000;
+}
+
+section .modal img{
+    height: 5% !important;
+    width: 100%;
+}
+
+
+.modal-content h5 + button {
+    outline: none;
+    border:0;
+}
+/***********************************Contact page section********************************/
+
+.contact-phone {
+    display: block;
+}
+
+
+.contact-email {
+    display: block;
+}
+
+.Contact a {
+    text-decoration: none;
+}
+
+
+/*************************************about page section*******************************************/
+.about-title{
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.about-me {
+    line-height: 2rem;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
+.about-me p {
+    font-family: 'Lora', serif;
+}
+
+.about button {
+    margin: 5% 0 0 88%;
+    opacity: 0.7;
+    width: 10%;
+}
+
+.about .btn-lg:hover{
+    background-color: #31326f;
+    opacity: 1;
+}
+
+
+/*********************************Footer************************************/
+
+footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:80px;   /* Height of the footer */
+    background:ghostwhite;
+    text-align: center;
+}
+
+footer i {
+    margin: 30px 1% 10px;
+}
+
+footer a {
+    color: black;
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 532px) {
+    .Profile img{
+        display: block;
+        margin: 0 auto !important;
+    }}
+
+/* THis design for HOME - page */
+#home_footer{
+         position: static ;
+    }
+
+
+
+
+
+
+
+
+
+/**************************THis design for register page ***************************/
+
+
+#register .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 8% auto 2%;
+    text-align: center;
+}
+
+#register .form-signin .checkbox {
+    font-weight: 400;
+}
+
+#register .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#register .form-signin .form-control:focus {
+    z-index: 2;
+}
+
+#register .top {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#register .middle {
+    border-radius: 0;
+    margin-bottom: -1px;
+}
+
+#register .bottom {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#register .h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+/************************Wehn user successfully registe**********************/
+
+.Succesfully_registe .content {
+    padding: 20px 0;
+}
+
+
+/************************Wehn user fail registe**********************/
+.Failure-register .content {
+    padding: 20px 0;
+}
+
+
+/***********************When user already Exist *********************/
+.User-exist .content {
+    padding: 20px 0;
+}

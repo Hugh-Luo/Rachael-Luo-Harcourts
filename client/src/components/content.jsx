@@ -4,7 +4,7 @@ import React from 'react';
 import Profile from "./Rachael-Luo-Profile";
 
 import housesList from "./houseImages";
-import $ from "jQuery";
+
 
 function Content() {
 

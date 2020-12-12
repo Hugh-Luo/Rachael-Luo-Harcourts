@@ -6,7 +6,7 @@ const path = require('path');
 
 const client = require("@mailchimp/mailchimp_marketing");
 
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5000;
 
 
 const bodyParser = require('body-parser')
@@ -20,11 +20,22 @@ app.use(bodyParser.json())         // THis part is very important when you got "
 
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.use(express.static(path.join(__dirname, 'client/build')))
 
-app.get('*', (req,res)=>{
-    res.sendFile(path.join(__dirname+'/client/build/index.html'))
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, 'client/build')))
+
+    app.get('*', (req,res)=>{
+        res.sendFile(path.join(__dirname+'/client/build/index.html'))
+    })
+
+}
+
+
+app.get('/api/hello', (req,res)=>{
+    res.send({express: 'Hello From Express'})
 })
+
+
 
 
 /*      THis part for you to add a member to list */
@@ -151,10 +162,10 @@ app.post('/rachael', (req,res)=>{
             try {
                 const add_response = await add_user(email,fname, lname)
                 console.log(add_response)
-                res.send(JSON.stringify(add_response))
+                res.send(add_response)
             } catch(err) {
                 console.log(err)
-                res.send( JSON.stringify(err))
+                res.send( err)
             }
 
         }

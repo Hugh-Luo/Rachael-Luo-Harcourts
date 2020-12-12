@@ -91,22 +91,24 @@ function RegisterPage(props){
                 }*/
                 // console.log(res)
                 {
+
                  return  res.json()
                 }
             )
             .then(data=> {
-                // console.log(data)
+                console.log(data)
+                console.log("I got fetched")
                 if (data.status === 400) {
-                    // console.log('Failure register')
+                    console.log('Failure register')
                     props.history.push('/register/fail-register')
 
 
                 } else if (data.status === 'subscribed'){
-                    // console.log('Successfully register')
+                    console.log('Successfully register')
                     props.history.push('/register/success-register')
                 } else if (data === 'user already exists') {
                     props.history.push('/register/userExist')
-                    // console.log('User exists')
+                    console.log('User exists')
                 }
             })
 

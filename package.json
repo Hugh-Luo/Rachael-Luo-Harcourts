@@ -1,14 +1,18 @@
 {
   "name": "backend",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.15.0",
+    "npm": "6.14.9"
+  },
   "description": "It is used to handle the information from the fonted, and then to add member in mailchimp audience",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "Hugh",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.25",
     "body-parser": "^1.19.0",

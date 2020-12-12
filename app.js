@@ -6,7 +6,8 @@ const path = require('path')
 
 const client = require("@mailchimp/mailchimp_marketing");
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5000
+;
 
 const bodyParser = require('body-parser')
 const app = express()

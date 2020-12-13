@@ -128,7 +128,7 @@ app.post('/rachael', (req,res)=>{
         return new Promise((resolve, reject)=> {
 
             let response = client.lists.getListMember(
-                process.env.LIST_ID,
+                process.env.LIST_NUM,
                 email
             )
             resolve(response)
@@ -138,7 +138,7 @@ app.post('/rachael', (req,res)=>{
 
     function add_user (email, fname, lname) {
         return new Promise((resolve, reject)=> {
-            const response = client.lists.addListMember(process.env.LIST_ID, {
+            const response = client.lists.addListMember(process.env.LIST_NUM, {
                 email_address: email,
                 status: 'subscribed',
                 merge_fields: {
